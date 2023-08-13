@@ -2,6 +2,7 @@ import { Formik } from 'formik';
 import { StyledForm, StyledError, Button,Label,Input } from "./ContactForm.styled";
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid'
+import PropTypes from 'prop-types';
 
  const SignupSchema = Yup.object().shape({
    name: Yup.string()
@@ -44,4 +45,8 @@ export const ContactForm = ({onAdd}) => {
 
     )
 
+}
+
+ContactForm.propTypes = {
+    onAdd: PropTypes.func,
 }

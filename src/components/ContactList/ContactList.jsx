@@ -1,4 +1,6 @@
-import { Button,Text } from "./ContactList.styled";
+import { Button, Text } from "./ContactList.styled";
+import PropTypes from 'prop-types';
+
 export const ContactList = ({filteredContacts, onDelete}) => {
     return (
         <ul>
@@ -12,4 +14,9 @@ export const ContactList = ({filteredContacts, onDelete}) => {
             }
         </ul>
     )
+}
+
+ContactList.propTypes = {
+    filteredContacts: PropTypes.array,
+    onDelete: PropTypes.func
 }
